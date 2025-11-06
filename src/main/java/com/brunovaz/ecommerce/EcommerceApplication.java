@@ -1,13 +1,13 @@
-package com.brunovaz.course;
+package com.brunovaz.ecommerce;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CourseApplication {
+public class EcommerceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CourseApplication.class, args);
+		SpringApplication.run(EcommerceApplication.class, args);
 	}
 
 }
