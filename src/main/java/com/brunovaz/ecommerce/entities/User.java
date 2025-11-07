@@ -1,11 +1,16 @@
 package com.brunovaz.ecommerce.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -20,6 +25,10 @@ public class User implements Serializable{
     private String email;
     private String phone;
     private String password;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "client")
+    private List<Order> orders = new ArrayList<>();
 
     public User(){
     }
@@ -72,6 +81,10 @@ public class User implements Serializable{
         this.password = password;
     }
 
+    public List<Order> getOrders() {
+        return orders;
+    }
+
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -93,4 +106,10 @@ public class User implements Serializable{
             return false;
         return true;
     }
+
+    public static long getSerialversionuid() {
+        return serialVersionUID;
+    }
+
+
 }
