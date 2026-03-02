@@ -41,7 +41,7 @@
 <h3 id="cloning">Clonando</h3>
 
 ```bash
-git clone https://github.com/seu-usuario/ecommerce-management.git
+git clone https://github.com/BrunoVAbreu/ecommerce-management.git
 ```
 
 <h3 id="starting">Iniciando</h3>
